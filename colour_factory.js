@@ -1,5 +1,3 @@
-//v0.1
-
 /**
 COLOURS
 This will create multiple square (as many as needed) and 
