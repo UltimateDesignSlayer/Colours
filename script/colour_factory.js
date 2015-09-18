@@ -8,7 +8,6 @@ function Colours(objColour){
 	this.name = objColour.name;
 	this.hexCode = objColour.hex;	
 }
-
  
 Colours.prototype = {
 	constructor: Colours,
