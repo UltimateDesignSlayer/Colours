@@ -19,7 +19,7 @@ Colours.prototype = {
 			console.log(that.name + " clicked");
 			
 			//If this colour isn't on
-			if (this.className.search("on") < 0){
+			if (this.className.search("on") != -1){
 				this.className.replace(" on", "");
 			}
 			else{
