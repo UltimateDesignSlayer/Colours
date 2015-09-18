@@ -15,11 +15,9 @@ Colours.prototype = {
 		//"that" carries "this" into the event listener scope
 		var that = this;
 		elem.addEventListener("click", function(){
-			console.log(that.name + " clicked");
-			
-			//If this colour isn't on
+			//If this colour is on
 			if (this.className.search("on") != -1){
-				this.className.replace(" on", "");
+				this.className = this.className.replace(" on", "");
 			}
 			else{
 				this.className += " on";
@@ -31,7 +29,7 @@ Colours.prototype = {
 		thisColour.innerHTML = this.name;
 		thisColour.style.background = this.hexCode;
 		thisColour.className = "colourSquare";
-		document.body.appendChild(thisColour);
+		document.querySelector("#coloursContainer").appendChild(thisColour);
 		
 		this.clickEvent(thisColour);
 	}

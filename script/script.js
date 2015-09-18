@@ -20,6 +20,18 @@ colourApp = {
 		}		
 	},
 	
+	objShapes:{
+		circle:{
+			name: "circle"
+		},
+		square:{
+			name: "square"
+		},
+		triangle:{
+			name: "triangle"
+		}
+	},
+	
 	colourLoop: function(){
 		var that = this;
 		for(obj in that.objColours){
@@ -29,7 +41,19 @@ colourApp = {
 		}
 	},
 	
-	init:function(){
-		this.colourLoop();
+	shapeLoop: function(){
+		var that = this;
+		for(obj in that.objShapes){
+			//need to refer to obj in [] as obj is a string 
+			var currShape = new Shapes(that.objShapes[obj]);
+			currShape.createShape();
+		}
+	},
+	
+	init: function(){
+		var that = this;
+		document.addEventListener("DOMContentLoaded", function(){
+			that.colourLoop();
+		});		
 	}
 }
