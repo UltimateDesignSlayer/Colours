@@ -3,7 +3,6 @@ COLOURS
 This will create multiple square (as many as needed) and 
 assign them colours depending on whats needed.
 **/
-
 //Colours - our constructor.
 function Colours(objColour){
 	this.name = objColour.name;
@@ -18,6 +17,14 @@ Colours.prototype = {
 		var that = this;
 		elem.addEventListener("click", function(){
 			console.log(that.name + " clicked");
+			
+			//If this colour isn't on
+			if (this.className.search("on") < 0){
+				this.className.replace(" on", "");
+			}
+			else{
+				this.className += " on";
+			}
 		});
 	},
 	createSquare: function(){

@@ -1,50 +1,13 @@
 <html>
 	<head>
-		<style>
-			body{
-				margin:0;
-			}
-		
-			.colourSquare{
-				width:100px;
-				height:100px;
-				float:left;
-				margin-right:10px;
-			}
-			
-		</style>
-	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		<script src="one.js"></script>
+		<script src="script.js"></script>
 	</head>
 	<body>
-	
 		<script>
-			var objColours = {
-				red:{
-					hex: "#ff0000",
-					name: "Red"
-				},
-				blue:{
-					hex: "#007fff",
-					name: "Blue"
-				},
-				green:{
-					hex: "#0ff000",
-					name: "Green"
-				},
-				yellow:{
-					hex: "#fff600",
-					name: "Yellow"
-				}
-			};
-			
-			for(obj in objColours){
-							
-				//need to refer to obj in [] as obj is a string 
-				var currColour = new Colours(objColours[obj]);
-				currColour.createSquare();
-			}
-		
+			colourApp.init();
 		</script>
 	</body>
 	

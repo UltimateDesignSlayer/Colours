@@ -1,0 +1,26 @@
+body{
+	margin:0;
+}
+
+.colourSquare{
+	float:left;
+	margin-right:10px;
+	font-family:arial;
+	padding:50px;
+}
+
+/*Mobile*/
+@media (max-width: 412px) {
+	.colourSquare{
+		width:100%;
+		float:left;
+		margin-right:0;
+		text-align: center;
+	}
+}
+
+	.colourSquare.on{
+		position:float;
+		width:100%;
+		height:100%;
+	}
