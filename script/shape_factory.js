@@ -15,9 +15,11 @@ Shapes.prototype = {
 		console.log(this.name);
 	},
 	createShape: function(){
+		var shapeContainer = document.createElement("div");
 		var shape = document.createElement("div");
 		shape.id = this.name;
-		document.querySelector("#shapesContainer").appendChild(shape);
+		document.querySelector("#shapesContainer").appendChild(shapeContainer);
+		shapeContainer.appendChild(shape);
 		
 		this.clickEvent(shape);
 	}

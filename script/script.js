@@ -54,6 +54,7 @@ colourApp = {
 		var that = this;
 		document.addEventListener("DOMContentLoaded", function(){
 			that.colourLoop();
+			that.shapeLoop();
 		});		
 	}
 }
