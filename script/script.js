@@ -17,7 +17,7 @@ colourApp = {
 		green:{
 			hex: "#0ff000",
 			name: "Green"
-		}		
+		}
 	},
 	
 	objShapes:{
@@ -33,12 +33,26 @@ colourApp = {
 	},
 	
 	colourLoop: function(){
+		//Reset container in case this function is run after page has loaded.
+		document.getElementById("coloursContainer").innerHTML = "";
+	
 		var that = this;
 		for(obj in that.objColours){
 			//need to refer to obj in [] as obj is a string 
 			var currColour = new Colours(that.objColours[obj]);
 			currColour.createSquare();
 		}
+	},
+	
+	//All three params are expected to be strings
+	addColour: function(objName, hexCode, name){
+		var subColourObj = {
+			hex: hexCode,
+			name: name
+		};
+
+		colourApp.objColours[objName] = subColourObj;
+		this.colourLoop(); //run the colour factory again
 	},
 	
 	shapeLoop: function(){
