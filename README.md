@@ -1,10 +1,11 @@
-# Colours
-Colours site for Sumaya
+# Colours & Shapes
+Colours and shapes site for Sumaya.
 
-# History
+# Change log
 
 ## 03/03/2016
 * Lots of changes.
+* Shapes now available.
 * Now using Bootstrap Boilerplate
 * Jquery now available for use
 * Nice proper responsive layout
