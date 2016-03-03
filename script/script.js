@@ -63,12 +63,27 @@ colourApp = {
 			currShape.createShape();
 		}
 	},
+
+	events:function(){
+	    var that = this;
+
+        //add colour button click
+	    var addColourBtn = document.getElementById("submitColour");
+	    var colourNameField = document.getElementById("colourName");
+	    var colourHexField = document.getElementById("colourHex");
+
+	    addColourBtn.addEventListener("click", function () {
+	        that.addColour(colourNameField.value, colourHexField.value, colourNameField.value);
+	    });
+	},
+
 	
 	init: function(){
 		var that = this;
 		document.addEventListener("DOMContentLoaded", function(){
 			that.colourLoop();
 			that.shapeLoop();
+			that.events();
 		});		
 	}
 }

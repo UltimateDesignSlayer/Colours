@@ -30,7 +30,7 @@ Colours.prototype = {
 		thisColour.innerHTML = this.name;
 		thisColour.style.background = this.hexCode;
 		thisColour.className = "colourSquare";
-		colourSquareContainer.className = "col-sm-6 col-sm-4";
+		colourSquareContainer.className = "col-xs-6 col-sm-4";
 		colourSquareContainer.appendChild(thisColour);
 		document.querySelector("#coloursContainer").appendChild(colourSquareContainer);
 		
