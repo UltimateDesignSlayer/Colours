@@ -25,11 +25,14 @@ Colours.prototype = {
 		});
 	},
 	createSquare: function(){
-		var thisColour = document.createElement("div");
+	    var thisColour = document.createElement("div");
+	    var colourSquareContainer = document.createElement("div");
 		thisColour.innerHTML = this.name;
 		thisColour.style.background = this.hexCode;
 		thisColour.className = "colourSquare";
-		document.querySelector("#coloursContainer").appendChild(thisColour);
+		colourSquareContainer.className = "col-sm-6 col-sm-4";
+		colourSquareContainer.appendChild(thisColour);
+		document.querySelector("#coloursContainer").appendChild(colourSquareContainer);
 		
 		this.clickEvent(thisColour);
 	}

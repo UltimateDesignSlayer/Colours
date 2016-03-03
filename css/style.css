@@ -8,21 +8,19 @@ body{
 }
 
 .colourSquare{
-	float:left;
-	margin-right:10px;
-	margin-bottom:15px;
 	font-family:arial;
-	padding:50px;
+    text-align:center;
+    height:120px;
+    line-height:120px;
+    margin-bottom:15px;
 }
 
 /*Mobile*/
+
 @media (max-width: 412px) {
 	.colourSquare{
-		width:100%;
-		float:left;
-		margin-right:0;
-		padding:20px 0;
-		text-align: center;
+        height:150px;
+        line-height:150px;
 	}
 }
 
